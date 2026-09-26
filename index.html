@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Día de la Producción Musical 2026</title>
+<meta name="description" content="Charlas, talleres y concurso de mezcla en el Tec de Monterrey, Campus Querétaro. 11 de noviembre de 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --tec:#0033A0; --tec-dark:#00246e;
+    --ink:#1a1b1d; --ink-2:#44464b; --muted:#797a80; --line:#dcd9d3;
+    --bg:#edebe6; --bg-2:#f4f2ee;
+    --maxw:720px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.62;font-size:16px;-webkit-font-smoothing:antialiased}
+  a{color:var(--tec)}
+  a:hover{text-decoration:underline;text-underline-offset:3px}
+  h1,h2{font-weight:700;letter-spacing:-.02em;line-height:1.18}
+  h3{font-weight:600;font-size:17px;letter-spacing:-.01em}
+  p{margin-bottom:14px;color:var(--ink-2)}
+  b,strong{color:var(--ink);font-weight:600}
+  img{display:block;max-width:100%}
+
+  /* barra y pie fijos, solo el centro hace scroll */
+  body{height:100vh;overflow:hidden;display:flex;flex-direction:column}
+  .tabbar{flex:0 0 auto;background:var(--tec)}
+  main{flex:1 1 auto;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  footer{flex:0 0 auto;background:var(--bg-2);border-top:1px solid var(--line)}
+
+  .tabbar .inner{max-width:1040px;margin:0 auto;display:flex;align-items:center;gap:2px;
+    padding:11px 24px;overflow-x:auto;scrollbar-width:none}
+  .tabbar .inner::-webkit-scrollbar{display:none}
+  .brandwrap{display:flex;align-items:center;gap:9px;flex:0 0 auto;
+    margin-right:14px;padding-right:16px;border-right:1px solid rgba(255,255,255,.3)}
+  .brandwrap img{width:22px;height:22px;filter:brightness(0) invert(1)}
+  .brand{font-weight:700;font-size:14px;letter-spacing:-.01em;color:#fff;white-space:nowrap}
+  .tab{appearance:none;border:none;background:transparent;font:500 13.5px Inter,sans-serif;
+    color:rgba(255,255,255,.72);padding:6px 11px;border-radius:5px;cursor:pointer;white-space:nowrap;flex:0 0 auto}
+  .tab:hover{color:#fff;background:rgba(255,255,255,.12)}
+  .tab.active{color:#fff;font-weight:600;background:rgba(255,255,255,.18)}
+
+  .panel{display:none;max-width:var(--maxw);margin:0 auto;padding:52px 24px 64px}
+  .panel.active{display:block}
+
+  h1{font-size:clamp(32px,5vw,46px);margin-bottom:14px}
+  h2{font-size:26px;margin-bottom:16px}
+  .date{font-weight:600;font-size:15.5px;color:var(--tec);margin-bottom:26px}
+  .lead{font-size:18.5px;line-height:1.58;color:var(--ink);margin-bottom:28px}
+  .note{font-size:14.5px;color:var(--muted)}
+
+  figure{margin:0 0 32px}
+  figure img{width:100%;height:auto;border-radius:6px}
+  figcaption{font-size:12.5px;color:var(--muted);margin-top:8px}
+
+  hr.rule{border:none;border-top:1px solid var(--line);margin:32px 0}
+
+  .block{margin-bottom:26px}
+  .block:last-child{margin-bottom:0}
+  .block h3{margin-bottom:4px}
+  .block h3 span{font-weight:400;color:var(--muted);font-size:15px}
+  .block p{margin-bottom:0}
+
+  .guest{display:grid;grid-template-columns:132px 1fr;gap:22px;align-items:start;margin-bottom:34px}
+  .guest:last-child{margin-bottom:0}
+  .guest .pic{width:132px;height:132px;border-radius:6px;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+  .guest .pic.ph{background:var(--bg-2);border:1px solid var(--line);display:flex;align-items:center;
+    justify-content:center;font-weight:700;font-size:30px;color:var(--line);letter-spacing:-.02em}
+  .guest h3{margin-bottom:4px}
+  .guest .act{font-size:14px;color:var(--muted);margin-bottom:9px}
+  .guest p{margin-bottom:0;font-size:15.5px}
+
+  .spec{width:100%;border-collapse:collapse;font-size:15.5px}
+  .spec td{padding:13px 0;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-2)}
+  .spec td:first-child{width:180px;color:var(--muted);font-size:14px;padding-right:22px}
+  .spec tr:last-child td{border-bottom:none}
+
+  ul.clean{list-style:none}
+  ul.clean li{position:relative;padding-left:18px;margin-bottom:8px;font-size:15.5px;color:var(--ink-2)}
+  ul.clean li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;background:var(--tec)}
+
+  .orgs{display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-top:8px}
+  .orgs img{height:42px;width:auto;mix-blend-mode:multiply}
+
+  footer .inner{max-width:var(--maxw);margin:0 auto;padding:13px 24px;font-size:12.5px;color:var(--muted);
+    display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  footer img{height:26px;width:auto;mix-blend-mode:multiply}
+
+  @media (max-width:600px){
+    .panel{padding:36px 20px 52px}
+    .guest{grid-template-columns:1fr;gap:14px}
+    .guest .pic{width:120px;height:120px}
+    .spec td{display:block;border:none}
+    .spec td:first-child{width:auto;padding-bottom:1px}
+    .spec td:last-child{padding-top:0;border-bottom:1px solid var(--line);padding-bottom:13px}
+  }
+</style>
+</head>
+<body>
+
+<div class="tabbar">
+  <div class="inner">
+    <span class="brandwrap">
+      <img src="assets/tec_logo.png" alt="Tec de Monterrey">
+      <span class="brand">Día de la Producción Musical</span>
+    </span>
+    <button class="tab" data-panel="inicio">Inicio</button>
+    <button class="tab" data-panel="invitados">Invitados</button>
+    <button class="tab" data-panel="concurso">Concurso de mezcla</button>
+    <button class="tab" data-panel="sede">Sede y contacto</button>
+  </div>
+</div>
+
+<main>
+
+<section class="panel" id="inicio">
+  <h1>Día de la Producción Musical 2026</h1>
+  <div class="date">Miércoles 11 de noviembre · Tec de Monterrey, Campus Querétaro</div>
+  <p class="lead">Un día de charlas, talleres y concurso de mezcla con gente que trabaja en la industria.</p>
+
+  <figure>
+    <img src="assets/campus_aerea.webp" alt="Vista aérea del Campus Querétaro del Tec de Monterrey">
+  </figure>
+
+  <div class="block">
+    <h3>Charlas y talleres</h3>
+    <p>Productores e ingenieros cuentan cómo trabajan, y algunos lo enseñan en taller el mismo día.</p>
+  </div>
+  <div class="block">
+    <h3>Concurso de mezcla</h3>
+    <p>Dos categorías, una para licenciatura y otra para preparatoria. Todos reciben el mismo multitrack y cada quien lo mezcla por su cuenta.</p>
+  </div>
+  <div class="block">
+    <h3>Sesión de grabación en vivo</h3>
+    <p>Una grabación hecha frente al público en el nuevo estudio del campus, de principio a fin.</p>
+  </div>
+
+  <hr class="rule">
+  <p>Entrada libre para la comunidad del Tec y para estudiantes de preparatoria interesados en el área. El programa por horas se anunciará más adelante.</p>
+  <div class="orgs">
+    <img src="assets/ehe_logo.jpg" alt="Tecnológico de Monterrey · Escuela de Humanidades y Educación">
+  </div>
+</section>
+
+<section class="panel" id="invitados">
+  <h2>Invitados</h2>
+  <p class="note" style="margin-bottom:34px">Lista preliminar. Se irán anunciando conforme se confirmen.</p>
+
+  <div class="guest">
+    <img class="pic" src="assets/marco_moreno.jpg" alt="Marco Moreno">
+    <div>
+      <h3>Marco Moreno</h3>
+      <div class="act">Charla y demostración de grabación</div>
+      <p>Ingeniero de audio detrás de canciones que marcaron una época en México: "Me Dediqué a Perderte" de Alejandro Fernández, varias de las clásicas de Sin Bandera y "Dime Ven" de Motel. Buena parte del pop mexicano de los 2000 pasó por sus manos. Nominado al Grammy y al Latin Grammy, hoy sigue produciendo proyectos urbanos como los de la artista EMJAY.</p>
+    </div>
+  </div>
+
+  <div class="guest">
+    <div class="pic ph">LM</div>
+    <div>
+      <h3>Leo Méndez</h3>
+      <div class="act">Charla y taller</div>
+      <p>Charla "Tecnología musical y el mundo de la síntesis", más un taller de síntesis básica para quienes quieran meter mano.</p>
+    </div>
+  </div>
+
+  <div class="guest">
+    <div class="pic ph">AV</div>
+    <div>
+      <h3>Armando Velarde</h3>
+      <div class="act">Por anunciar</div>
+      <p>Charla dentro del programa del día.</p>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="concurso">
+  <h2>Concurso de mezcla</h2>
+  <p class="lead">Todos los participantes reciben las mismas pistas y cada quien entrega su propia mezcla. Se evalúan a ciegas y los resultados se anuncian el 11 de noviembre, durante el evento.</p>
+
+  <hr class="rule">
+  <h3>Categorías</h3>
+  <ul class="clean" style="margin-top:10px">
+    <li><b>Licenciatura</b> — estudiantes de Tecnología y Producción Musical, Campus Querétaro.</li>
+    <li><b>Preparatoria</b> — estudiantes de la Preparatoria Tec de Monterrey, Campus Querétaro. Se mezcla en BandLab, sobre un proyecto compartido que cada quien copia a su cuenta.</li>
+  </ul>
+
+  <hr class="rule">
+  <h3>Cómo se participa</h3>
+  <table class="spec" style="margin-top:10px">
+    <tr><td>Participación</td><td>Individual.</td></tr>
+    <tr><td>Herramientas</td><td>Licenciatura: Pro Tools, con cualquier plugin excepto los de asistencia por IA. Preparatoria: BandLab.</td></tr>
+    <tr><td>Qué se entrega</td><td>La mezcla en WAV estéreo 24 bits / 48 kHz, con un documento breve que explique cómo la trabajaste.</td></tr>
+    <tr><td>Anonimato</td><td>Los archivos se identifican solo con matrícula. El jurado no sabe de quién es cada mezcla.</td></tr>
+    <tr><td>Sesión del proyecto</td><td>Guarda tu sesión. A los finalistas se les pedirá para verificar el trabajo.</td></tr>
+    <tr><td>Inteligencia artificial</td><td>No se permiten servicios que compongan, mezclen o masterizen automáticamente. La mezcla tiene que ser tuya.</td></tr>
+    <tr><td>Jurado</td><td>Profesores de la Licenciatura en Tecnología y Producción Musical.</td></tr>
+  </table>
+
+  <hr class="rule">
+  <h3>Qué se evalúa</h3>
+  <ul class="clean" style="margin-top:10px">
+    <li>Calidad de las pistas y de la mezcla.</li>
+    <li>Balance tonal y dinámica musical.</li>
+    <li>Niveles y paneo.</li>
+    <li>Procesamiento creativo y espacialidad.</li>
+  </ul>
+  <p class="note">En preparatoria se evalúan los mismos puntos a un nivel introductorio.</p>
+
+  <hr class="rule">
+  <h3>Reconocimientos</h3>
+  <p style="margin-top:10px">Oro, plata y bronce por categoría, más mención honorífica a criterio del jurado. Los finalistas reciben además retroalimentación del jurado sobre su mezcla.</p>
+
+  <hr class="rule">
+  <h3>Fechas — Licenciatura</h3>
+  <table class="spec" style="margin-top:10px">
+    <tr><td>Apertura</td><td>Lunes 28 de septiembre de 2026</td></tr>
+    <tr><td>Cierre de entregas</td><td>Miércoles 28 de octubre de 2026</td></tr>
+    <tr><td>Anuncio de finalistas</td><td>Miércoles 4 de noviembre de 2026</td></tr>
+    <tr><td>Anuncio de reconocimientos</td><td>Miércoles 11 de noviembre de 2026, durante el evento</td></tr>
+  </table>
+  <p style="margin-top:16px"><a href="convocatoria-licenciatura.pdf" style="font-weight:600">Convocatoria y bases — Licenciatura (PDF) →</a></p>
+  <p class="note">Convocatoria de preparatoria: fechas y liga de registro se anunciarán más adelante.</p>
+</section>
+
+<section class="panel" id="sede">
+  <h2>Sede y contacto</h2>
+  <figure style="margin-top:22px">
+    <img src="assets/campus_biblioteca.webp" alt="Campus Querétaro del Tec de Monterrey">
+  </figure>
+  <table class="spec">
+    <tr><td>Fecha</td><td>Miércoles 11 de noviembre de 2026</td></tr>
+    <tr><td>Sede</td><td>Tecnológico de Monterrey, Campus Querétaro</td></tr>
+    <tr><td>Organiza</td><td>Licenciatura en Tecnología y Producción Musical</td></tr>
+    <tr><td>Entrada</td><td>Libre</td></tr>
+    <tr><td>Dudas</td><td><a href="mailto:mariovallejo@tec.mx">mariovallejo@tec.mx</a></td></tr>
+  </table>
+  <hr class="rule">
+  <p>Si eres estudiante de preparatoria y te interesa el programa, este es un buen día para venir a ver los estudios y platicar con los profesores.</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="inner">
+    <img src="assets/ehe_logo.jpg" alt="Tecnológico de Monterrey · Escuela de Humanidades y Educación">
+    <span>Campus Querétaro · 11 de noviembre de 2026</span>
+  </div>
+</footer>
+
+<script>
+var PANELS = ['inicio','invitados','concurso','sede'];
+function showPanel(id, push){
+  if (PANELS.indexOf(id) < 0) id = 'inicio';
+  document.querySelectorAll('.panel').forEach(function(p){ p.classList.toggle('active', p.id === id); });
+  document.querySelectorAll('.tab').forEach(function(t){ t.classList.toggle('active', t.dataset.panel === id); });
+  if (push){ history.replaceState(null, '', '#' + id); document.querySelector('main').scrollTop = 0; }
+}
+document.querySelectorAll('.tab').forEach(function(t){
+  t.addEventListener('click', function(){ showPanel(t.dataset.panel, true); });
+});
+window.addEventListener('hashchange', function(){ showPanel(location.hash.slice(1), false); });
+showPanel(location.hash.slice(1), false);
+</script>
+</body>
+</html>
