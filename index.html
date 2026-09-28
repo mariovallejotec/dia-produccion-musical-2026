@@ -86,6 +86,18 @@
   .orgs{display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-top:8px}
   .orgs img{height:42px;width:auto;mix-blend-mode:multiply}
 
+  .pdfgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+  .pdfcard{display:block;border:1px solid var(--line);border-radius:8px;padding:20px;background:var(--bg-2);
+    text-decoration:none;transition:border-color .15s}
+  .pdfcard:hover{border-color:var(--tec);text-decoration:none}
+  .pdfcard h3{color:var(--ink);margin-bottom:4px}
+  .pdfcard .cat{font-size:13.5px;color:var(--muted);margin-bottom:10px}
+  .pdfcard .cta{font-size:14.5px;font-weight:600;color:var(--tec)}
+
+  @media (max-width:600px){
+    .pdfgrid{grid-template-columns:1fr}
+  }
+
   footer .inner{max-width:var(--maxw);margin:0 auto;padding:13px 24px;font-size:12.5px;color:var(--muted);
     display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
   footer img{height:26px;width:auto;mix-blend-mode:multiply}
@@ -180,51 +192,20 @@
 
 <section class="panel" id="concurso">
   <h2>Concurso de mezcla</h2>
-  <p class="lead">Todos los participantes reciben las mismas pistas y cada quien entrega su propia mezcla. Se evalúan a ciegas y los resultados se anuncian el 11 de noviembre, durante el evento.</p>
+  <p class="lead">Dos categorías, una para licenciatura y otra para preparatoria. Todos los participantes reciben las mismas pistas de una canción y entregan su propia mezcla; el jurado la evalúa sin saber de quién es. Los resultados se anuncian el 11 de noviembre, durante el evento.</p>
 
-  <hr class="rule">
-  <h3>Categorías</h3>
-  <ul class="clean" style="margin-top:10px">
-    <li><b>Licenciatura</b> — estudiantes de Tecnología y Producción Musical, Campus Querétaro.</li>
-    <li><b>Preparatoria</b> — estudiantes de la Preparatoria Tec de Monterrey, Campus Querétaro. Se mezcla en BandLab, sobre un proyecto compartido que cada quien copia a su cuenta.</li>
-  </ul>
-
-  <hr class="rule">
-  <h3>Cómo se participa</h3>
-  <table class="spec" style="margin-top:10px">
-    <tr><td>Participación</td><td>Individual.</td></tr>
-    <tr><td>Herramientas</td><td>Licenciatura: Pro Tools, con cualquier plugin excepto los de asistencia por IA. Preparatoria: BandLab.</td></tr>
-    <tr><td>Qué se entrega</td><td>La mezcla en WAV estéreo 24 bits / 48 kHz, con un documento breve que explique cómo la trabajaste.</td></tr>
-    <tr><td>Anonimato</td><td>Los archivos se identifican solo con matrícula. El jurado no sabe de quién es cada mezcla.</td></tr>
-    <tr><td>Sesión del proyecto</td><td>Guarda tu sesión. A los finalistas se les pedirá para verificar el trabajo.</td></tr>
-    <tr><td>Inteligencia artificial</td><td>No se permiten servicios que compongan, mezclen o masterizen automáticamente. La mezcla tiene que ser tuya.</td></tr>
-    <tr><td>Jurado</td><td>Profesores de la Licenciatura en Tecnología y Producción Musical.</td></tr>
-  </table>
-
-  <hr class="rule">
-  <h3>Qué se evalúa</h3>
-  <ul class="clean" style="margin-top:10px">
-    <li>Calidad de las pistas y de la mezcla.</li>
-    <li>Balance tonal y dinámica musical.</li>
-    <li>Niveles y paneo.</li>
-    <li>Procesamiento creativo y espacialidad.</li>
-  </ul>
-  <p class="note">En preparatoria se evalúan los mismos puntos a un nivel introductorio.</p>
-
-  <hr class="rule">
-  <h3>Reconocimientos</h3>
-  <p style="margin-top:10px">Oro, plata y bronce por categoría, más mención honorífica a criterio del jurado. Los finalistas reciben además retroalimentación del jurado sobre su mezcla.</p>
-
-  <hr class="rule">
-  <h3>Fechas — Licenciatura</h3>
-  <table class="spec" style="margin-top:10px">
-    <tr><td>Apertura</td><td>Lunes 28 de septiembre de 2026</td></tr>
-    <tr><td>Cierre de entregas</td><td>Miércoles 28 de octubre de 2026</td></tr>
-    <tr><td>Anuncio de finalistas</td><td>Miércoles 4 de noviembre de 2026</td></tr>
-    <tr><td>Anuncio de reconocimientos</td><td>Miércoles 11 de noviembre de 2026, durante el evento</td></tr>
-  </table>
-  <p style="margin-top:16px"><a href="convocatoria-licenciatura.pdf" style="font-weight:600">Convocatoria y bases — Licenciatura (PDF) →</a></p>
-  <p class="note">Convocatoria de preparatoria: fechas y liga de registro se anunciarán más adelante.</p>
+  <div class="pdfgrid">
+    <a class="pdfcard" href="convocatoria-licenciatura.pdf">
+      <h3>Licenciatura</h3>
+      <div class="cat">Tecnología y Producción Musical, Campus Querétaro</div>
+      <div class="cta">Convocatoria y bases (PDF) →</div>
+    </a>
+    <a class="pdfcard" href="convocatoria-prepa.pdf">
+      <h3>Preparatoria</h3>
+      <div class="cat">Prepa Tec, Campus Querétaro</div>
+      <div class="cta">Convocatoria y bases (PDF) →</div>
+    </a>
+  </div>
 </section>
 
 <section class="panel" id="sede">
